@@ -1,0 +1,232 @@
+@import "variables";
+@import "~viewerjs/dist/viewer.css";
+
+%no-x-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@mixin bulma-padding {
+  padding: 0.75rem;
+}
+
+/*------
+    DETAILS-HEADER 
+--------*/
+.preview-section {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+
+  .banner-container {
+    height: 35vh;
+    min-height: 300px;
+    padding: 0;
+  }
+
+  .resume-container {
+    @extend %no-x-padding;
+  }
+}
+
+.property-resume {
+  .title {
+    line-height: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .price {
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: italic;
+    position: relative;
+    padding: 1rem 0;
+    display: block;
+    margin-bottom: 1rem;
+
+    img {
+      vertical-align: middle;
+    }
+
+    .value {
+      font-weight: 500;
+      font-style: normal;
+      color: $grey-darker;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      height: 2px;
+      width: 25%;
+      min-width: 75px;
+      background: $grey-darker;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+  }
+  .date {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+  }
+  .features {
+    margin: 0.65rem 0;
+
+    & > span {
+      font-size: 0.9rem;
+      display: inline-block;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+
+      img {
+        vertical-align: middle;
+        width: 1.15rem;
+        margin-right: 0.2rem;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+/*------
+    DETAILS-FOOTER
+--------*/
+.bottom-info {
+  border-top: 1px solid $grey-darker;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.75rem;
+
+  & > .col {
+    display: flex;
+    align-items: center;
+  }
+
+  .bottom_title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+
+  div:first-child {
+    img {
+      margin-right: 2rem;
+      width: auto;
+      height: 2.5rem;
+    }
+  }
+
+  .price {
+    font-weight: 300;
+    font-size: 1.15rem;
+    font-style: italic;
+    margin-right: 1rem;
+
+    img {
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+    }
+
+    .value {
+      font-weight: 500;
+      font-style: normal;
+      color: $grey-darker;
+    }
+  }
+
+  &.in-place {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &.fixed {
+    position: fixed;
+    background-color: #fff;
+    animation: in-bottom 1s;
+    z-index: 10;
+  }
+
+  @keyframes in-bottom {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+/*---------
+    VIEWER 
+----------*/
+.viewer-title {
+  color: $white;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0 5% 0.5rem;
+}
+
+/*------
+  MEDIA QUERIES
+--------*/
+@media (min-width: 600px) {
+  .bottom-info {
+    padding: 0.75rem 1.5rem;
+    .price {
+      font-size: 1.25rem;
+    }
+  }
+}
+@media (min-width: 816px) {
+  .preview-section {
+    margin: 0 !important;
+
+    .resume-container {
+      padding: 0 0.5rem 0 0;
+    }
+
+    .banner-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      margin: 0;
+      padding-left: 0.5rem;
+    }
+  }
+
+  .content-aside {
+    .filler {
+      background-color: $grey-table-bg;
+      height: 100%;
+    }
+    .schedule {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .bottom-info {
+    padding: 0.75rem 2rem;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}

@@ -1,0 +1,181 @@
+.modal-access {
+  justify-content: start;
+  z-index: 50;
+
+  .modal-background {
+    background-color: rgba($white, 0.9);
+  }
+
+  .modal-content {
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    overflow-y: auto;
+
+    .toolbar {
+      background-color: $white;
+      width: 100%;
+
+      .container {
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      img {
+        max-height: 2.5rem;
+      }
+
+      .button {
+        border-radius: 0;
+        padding: 0 2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+      }
+    }
+
+    .top-logo {
+      width: 2rem;
+      margin: 2rem 0 1rem 0;
+    }
+
+    .top-title {
+      font-weight: 400;
+      font-size: 1.15rem;
+      font-style: italic;
+    }
+
+    .form {
+      padding: 2rem 4rem;
+      background-color: $white;
+    }
+
+    .input {
+      border: none;
+      box-shadow: none;
+      border-bottom: 1px solid $black;
+      border-radius: 0;
+      margin-bottom: 1rem;
+
+      &::placeholder {
+        color: $black;
+        font-weight: 200;
+        font-style: italic;
+      }
+    }
+
+    .recovery-link {
+      display: block;
+      text-align: right;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+    }
+
+    hr {
+      margin: 1.5rem 2rem 0.5rem 2rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+      padding: 0 2rem;
+
+      a {
+        color: $primary;
+      }
+    }
+
+    .btn-access {
+      border-radius: 0;
+      padding: 0 2rem;
+      font-weight: 500;
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      text-transform: uppercase;
+    }
+
+    .label {
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .select select {
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid $black;
+      font-style: italic;
+      font-weight: 200;
+      color: $black;
+    }
+
+    .select:not(.is-multiple):not(.is-loading)::after {
+      border-color: $black;
+    }
+
+    .select:not(.is-multiple):not(.is-loading)::after,
+    .navbar-link:not(.is-arrowless)::after {
+      border-radius: 0;
+    }
+
+    .select:not(.is-multiple):not(.is-loading)::after,
+    .navbar-link:not(.is-arrowless)::after {
+      border-width: 1px;
+    }
+  }
+
+  .input-validation-wrapper {
+    position: relative;
+
+    .validation-block {
+      position: absolute;
+      right: -17rem;
+      top: -5rem;
+      width: 12rem;
+      background-color: $white;
+      padding: 0.5rem;
+      font-size: 0.75rem;
+      text-align: left;
+      display: none;
+
+      &.is-active {
+        display: block;
+      }
+
+      p {
+        padding: 0;
+        margin-bottom: 0.25rem;
+        font-size: 0.75rem;
+      }
+
+      .rule {
+        display: block;
+
+        &.success {
+          color: $primary;
+        }
+
+        .fa {
+          margin-right: 0.25rem;
+        }
+
+        span:last-child {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+/* AGREGADO POR PAM */
+@media (max-width: 768px) {
+  .modal-access .modal-content .form {
+    padding: 1rem 2rem;
+  }
+  .modal-access .modal-content .recovery-link {
+    text-align: center !important;
+  }
+  .modal-access .modal-content .toolbar .container{
+    padding:1rem;
+  }
+}

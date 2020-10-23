@@ -1,0 +1,195 @@
+@import 'variables';
+
+.select2 {
+  width: 100% !important;
+}
+.carousel-services .carousel-item
+{
+  cursor: pointer;
+}
+
+#services-header {
+  background-image: url('../images/services/main_background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .main-title-container {
+    position: relative;
+    top: 3rem;
+  }
+
+  h1.title {
+    color: $white;
+    margin: 0;
+
+    &:last-of-type {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .input {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1.2rem;
+    padding: 1.97rem 1.5rem;
+
+    &::placeholder {
+      color: $grey-dark;
+      font-weight: 100;
+      font-style: italic;
+    }
+  }
+
+  a.search {
+    font-size: 1.75rem;
+    color: transparent;
+    background-color: $white;
+    border-radius: 0;
+    border: none;
+    position: relative;
+    -webkit-text-stroke: 2px $yellow;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 30;
+      top: 25%;
+      width: 1px;
+      height: 50%;
+      background: $yellow;
+    }
+  }
+
+  #arrow-down {
+    color: $white;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+  }
+}
+
+.service-type {
+  padding: 2rem;
+
+  >.title {
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+
+  .service:not(:last-of-type) {
+      margin-bottom: 2.5rem;
+  }
+
+  .service>.picture {
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .service>.detail {
+    border: 1px solid $grey-lighter;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .data {
+      flex-basis: 55%;
+
+      .vue-star-rating {
+        margin-bottom: 0.25rem;
+      }
+
+      .name {
+        display: inline-block;
+        padding: 0.25rem 1rem;
+        color: $white;
+        font-weight: 600;
+        font-size: 1.15rem;
+
+        &-basic {
+            background-color: rgba($primary, 0.5);
+        }
+
+        &-select {
+            background-color: rgba($purple, 0.5);
+        }
+
+        &-premium {
+            background-color: rgba($pink, 0.5);
+        }
+      }
+
+      .profession {
+        display: inline-block;
+        font-weight: 600;
+        padding: 0.25rem 1rem;
+        text-transform: uppercase;
+      }
+
+      .description {
+        font-size: 0.7rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+
+      img:not(:last-of-type) {
+        margin-bottom: 0.5rem;
+        width: 2rem;
+      }
+    }
+
+  }
+}
+
+#profiles .select2-container {
+  display: block;
+  width: 100% !important;
+}
+
+#profiles .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  font-size: 0.9rem;
+  border: 2px solid $primary;
+  font-style: italic;
+  border-radius: 0;
+  background-color: $white;
+}
+
+#profiles .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  float: right;
+  margin-left: 2px;
+  color: $black;
+}
+
+#profiles .select2-container--default.select2-container--focus .select2-selection--multiple,
+#profiles .select2-container--default .select2-selection--multiple {
+  border: 1px solid $grey-light;
+  border-radius: 0;
+}
+
+#profiles .select2-container--default .select2-selection--single {
+  border-radius: 0;
+  padding: 0;
+  height: 2rem;
+  font-size: 0.8rem;
+  border-color: $grey-light;
+
+  .select2-selection__arrow {
+    height: 2rem;
+
+    b {
+      border-color: $grey-light transparent transparent transparent;
+    }
+  }
+}

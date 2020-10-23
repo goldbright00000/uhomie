@@ -1,0 +1,165 @@
+// Variables
+@import "../variables";
+
+.map-details {
+  .filter-wrapper {
+    &.on-map {
+      height: 100%;
+      width: 50%;
+      max-width: 260px;
+      padding: 10px;
+      overflow: hidden;
+
+      .filter-container {
+        overflow: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  & > .filter-wrapper.on-map {
+    display: none;
+  }
+
+  .filter-container {
+    background-color: rgba(255, 255, 255, 0.875);
+  }
+  .filter {
+    border-bottom: 1px solid #ddd;
+    padding: 0.7rem;
+    font-size: 0.9rem;
+
+    .filter-header {
+      display: flex;
+      line-height: 35px;
+      cursor: pointer;
+
+      .header-title,
+      .header-title ~ * {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+      }
+
+      .switch {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        margin-right: 0.7rem;
+        label {
+          border: 1px solid $primary;
+          border-radius: 50%;
+          padding: 8px;
+          position: relative;
+
+          input {
+            border-color: transparent;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 4px;
+          }
+        }
+      }
+
+      .icon-wrapper {
+        vertical-align: middle;
+        width: 30px;
+        margin-right: 0.5rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .toggle {
+        flex-grow: 0;
+        color: inherit;
+        font-size: 1.2rem;
+      }
+    }
+
+    .filter-content {
+      display: none;
+      padding-top: 0.5rem;
+
+      .places {
+        .place-item {
+          cursor: pointer;
+          display: flex;
+          padding: 5px 0 5px 30px;
+
+          & > * {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+          }
+
+          .name {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            display: block;
+            padding-right: 1rem;
+          }
+
+          .distance {
+            flex-grow: 0;
+            opacity: 0.5;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    // Seach Filter
+    &.search {
+      .input {
+        border-color: transparent;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+      }
+    }
+    // Filter Open
+    &.open {
+      .filter-header {
+        .toggle .icon {
+          transform: rotate(180deg);
+        }
+      }
+      .filter-content {
+        display: block;
+      }
+    }
+
+    &.disabled {
+      .filter-header {
+        opacity: 0.5;
+
+        .toggle .icon {
+          transform: none;
+        }
+      }
+      .filter-content {
+        display: none;
+      }
+    }
+  }
+}

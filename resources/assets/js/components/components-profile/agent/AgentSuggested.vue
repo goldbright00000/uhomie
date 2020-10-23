@@ -1,0 +1,37 @@
+<template>
+    <div class="agent-suggeted">
+        <div class="columns" style="padding-bottom: 20px;">
+            <div class="column is-12 line-down">
+                <span>Proyectos uHomie</span>
+            </div>
+        </div>
+        <div class="columns is-multiline">
+            <div class="column is-12 services-header" id="services-header">
+                <div v-for="item in services" :key="item.id">
+                    <div class="service-type">
+                        <service v-bind="item"></service>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    const imagesDir = document.getElementById('images-dir').value;
+    import AgentCore from './AgentCore';
+    import Service from './../../Service';
+
+    export default {
+        components: {
+            Service, AgentCore,
+        },
+        name: 'AgentSuggested',
+        props: {},
+        data() {
+            return {
+                        imagePath: imagesDir
+                    }
+                }
+        }
+</script>

@@ -1,0 +1,27 @@
+{
+  "features" : [
+    { "key" : "package_amount" , "value" : "Precio" },
+    { "key" : "applications_received_count" , "value" : "Cantidad de Postulaciones" },
+    { "key" : "score_display" , "value" : "Mostrar Scoring" },
+    { "key" : "display_all_properties" , "value" : "Ver todas las propiedades" },
+    { "key" : "commission" , "value" : "Comisión" },
+    { "key" : "owner_contact" , "value" : "Contacto" },
+    { "key" : "suggestions_to_owners" , "value" : "Sugerencias a propietarios" },
+    { "key" : "owner_verification" , "value" : "Verificacion de Propietario" },
+    { "key" : "trust_seal" , "value" : "Sello de Confianza" },
+    { "key" : "smart_agent" , "value" : "Agendamiento Inteligente" },
+    { "key" : "recommendations" , "value" : "Recomendaciones" },
+    { "key" : "application_count" , "value" : "Cantidad de postulaciones" },
+    { "key" : "properties_count" , "value" : "Cantidad de propiedades " },
+    { "key" : "tenanting_fee" , "value" : "Comision de arriendo" },
+    { "key" : "suggestions_to_tenants" , "value" : "Sugerencia a Arrendatarios" },
+    { "key" : "services_counts" , "value" : "Cantidad de Servicios" },
+    { "key" : "photos_per_project" , "value" : "Fotos por publicacion" },
+    { "key" : "videos_per_project" , "value" : "Videos por publicacion" },
+    { "key" : "project_due_days" , "value" : "Dias de publicacion" },
+    { "key" : "add_days"  , "value" : "Dias de publicacion" },
+    { "key" : "add_zones"  , "value" : "Publicidad en WEB" },
+    { "key" : "public_support" , "value" : "Soporte Publicitario" },
+    { "key" : "service_fee" , "value" : "Comision por servicio" }
+  ]
+}

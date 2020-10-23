@@ -1,0 +1,22 @@
+@import "variables";
+
+#error-header {
+	background-color: #FFC600;
+	background-image: url('../images/errors/marca-de-agua.png');
+	background-position: center;
+    background-repeat: no-repeat;
+
+  .main-title-wrapper {
+    text-align: center;
+  }
+
+  h1.title {
+    color: $grey-darker;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.25rem;
+    padding-bottom: 2rem;
+    position: relative;
+  }
+
+}

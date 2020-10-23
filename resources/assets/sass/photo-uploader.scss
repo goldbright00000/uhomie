@@ -1,0 +1,87 @@
+.slide-box{
+
+}
+
+.image-preview, .callback-preview {
+    width: 190px;
+    height: 110px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #ecf0f1;
+    margin: 5px auto;
+}
+.image-preview input, .callback-preview input {
+    line-height: 100px;
+    font-size: 100px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+}
+.image-preview label, .callback-preview label {
+    position: absolute;
+    z-index: 5;
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: #bdc3c7;
+    width: 100px;
+    height: 25px;
+    font-size: 10px;
+    line-height: 25px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+
+
+.main-image-preview {
+    width: 500px;
+    height: 281px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #ecf0f1;
+}
+
+.main-image-preview input{
+    line-height: 200px;
+    font-size: 200px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+}
+.main-image-preview label{
+    position: absolute;
+    z-index: 5;
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: #bdc3c7;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+// custom
+.main-image-preview {
+    width: 100%;
+    height: 281px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #ecf0f1;
+}
+
+.image-preview label, .callback-preview label {
+    background-color: #40c8ff;
+}

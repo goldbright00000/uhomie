@@ -1,0 +1,113 @@
+@import "variables";
+.navbar-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  top: 0;
+}
+
+.container {
+	max-width: 640px;
+}
+
+p {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+#aboutus-header {
+  background-image: url('../images/aboutus/aboutus-banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .main-title-wrapper {
+    padding-top: 4rem;
+    padding-left: 2rem;
+  }
+
+  h1.title {
+    color: $white;
+    font-size: 1.8rem;
+    font-family: 'Lato', sans-serif;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0.3rem;
+    }
+  }  
+
+  .button {
+    margin-top: 1rem;
+    background-color: transparent;
+    border-color: $white;
+    color: $white;
+
+    &:hover {
+      border-color: $white;
+      background-color: $white;
+      color: $grey;
+    }
+  }
+
+  #arrow-down {
+    color: $white;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+  }
+}
+
+.subtitle {
+	font-size: 1.8rem;
+	font-weight: bold;
+	font-style: italic;
+	color: #00a2ff;
+	letter-spacing: 2px;
+}
+
+
+#process-section {
+  padding-bottom: 0;
+
+  .columns {
+    padding: 0 10rem;
+  }
+
+  .column img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .process-step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1.title {
+      font-size: 4rem;
+      display: inline-block;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: -120%;
+        bottom: 13px;
+        z-index: 30;
+        height: 8px;
+        width: 100%;
+        background: $yellow;
+      }
+    }
+
+    p {
+      font-style: italic;
+      color: $grey-darker;
+      letter-spacing: 2px;
+    }
+
+    .button {
+      margin-top: 3rem;
+    }
+  }
+}

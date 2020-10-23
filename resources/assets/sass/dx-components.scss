@@ -1,0 +1,211 @@
+/* menus */
+
+.menus-app {
+
+  .menu-top {
+    padding: 20px 20px 40px;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+
+    .menu-title {
+      font-size: 32px;
+    }
+
+  }
+  .menu-list {
+    LI {
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  .main {
+    .column {
+      background: #fff;
+    }
+  }
+}
+
+/* checkstatus */
+
+.check-status {
+  font-size: 13px;
+  > IMG {
+    vertical-align: middle;
+
+  }
+}
+
+
+
+/**/
+
+.profiles {
+
+  .postul-status, .holding-status {
+    > DIV {
+      padding-top: 20px;
+    }
+    .media-content {
+
+      font-size: 10px;
+      text-transform: uppercase;
+
+      .aproved {
+        border-bottom: 5px solid #51e3c4;
+      }
+      .review {
+        border-bottom: 5px solid #f7d16c;
+      }
+      .rejected {
+        border-bottom: 5px solid #d86862;
+      }
+    }
+
+  }
+
+  .scoring {
+    > DIV {
+
+      > DIV {
+        height: 52px;
+        width: 38px;
+
+        > P {
+          position: absolute;
+          font-size: 12px;
+          text-align: center;
+          width: 38px;
+          margin-top: 17px;
+          color: #fff;
+        }
+      }
+    }
+    .mem-basic {
+      background-color: #39b0d8;
+
+    }
+
+    .mem-select {
+      background-color: #8c79f7;
+
+    }
+
+    .mem-premium {
+      background-color: #de80f2;
+
+    }
+
+  }
+
+  .postul {
+    padding-top: 15px;
+    P {
+      font-size: 13px;
+      margin-top: -3px;
+      margin-bottom: 0px;
+
+    }
+  }
+
+  .contacts {
+
+    IMG {
+      margin-top: -2px;
+      margin-bottom: -2px;
+    }
+  }
+
+  .holding-info {
+
+    position: static;
+
+    .mem-basic {
+      color: #39b0d8;
+      font-weight: bold;
+    }
+
+    .mem-select {
+      color: #8c79f7;
+      font-weight: bold;
+    }
+
+    .mem-premium {
+      color: #de80f2;
+      font-weight: bold;
+    }
+
+    > div {
+      margin: -5px;
+      font-size: 14px;
+
+
+
+
+
+
+    }
+
+    .price {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+/* holding-details */
+
+.holding-details {
+  .media-left {
+    width: 25px;
+    padding-top: 3px;
+    margin: auto 5px auto auto;
+  }
+
+  .media-content {
+    font-size: 10px;
+    //white-space: nowrap;
+    margin: auto;
+  }
+
+  .is-one-third {
+    padding: 7px 4px;
+  }
+
+  .is-12 {
+    padding: 0px 4px;
+    margin-top: -3px;
+  }
+}
+
+.holding-views  {
+  .media-left {
+    padding-top: 2px;
+    width: 28px;
+  }
+
+  .media-content {
+    font-size: 11px;
+    //white-space: nowrap;
+    margin: auto;
+  }
+
+  .is-one-third {
+    padding: 7px 4px;
+  }
+
+  .is-12 {
+    padding: 0px 4px;
+    margin-top: -3px;
+  }
+
+}
+
+/* caja de menmbresias ( tenant/Owner -> Mi perfil ) */
+
+.your-mem {
+    > * {
+      font-size: 12px;
+      margin: auto auto;
+      text-align: center;
+    }
+}
+

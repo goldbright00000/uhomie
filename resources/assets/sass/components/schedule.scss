@@ -1,0 +1,187 @@
+@import "../variables";
+
+%is-basic {
+  border-color: $primary;
+  color: $primary;
+}
+
+%is-select {
+  border-color: $purple;
+  color: $purple;
+}
+
+%is-premium {
+  border-color: $pink;
+  color: $pink;
+}
+
+%message {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.schedule {
+  border: 1px solid $black;
+  padding: 1rem;
+  position: relative;
+
+  .title {
+    font-weight: 400;
+    border-bottom: 1px solid $black;
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+  }
+
+  .days,
+  .hours {
+    border-bottom: 1px solid $black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: $grey-darker;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .button {
+    margin: 0 auto;
+    margin-top: 1rem;
+    display: block;
+  }
+
+  .options-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-basis: 25%;
+      max-width: calc(25% - 6px);
+
+      .text {
+        text-align: center;
+        border: 1px solid $black;
+        padding: 0.5rem;
+        width: 100%;
+        cursor: pointer;
+
+        span {
+          text-transform: uppercase;
+          font-weight: 300;
+          display: block;
+
+          &:nth-child(1) {
+            font-size: 0.75rem;
+            line-height: 1.5;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &:nth-child(2) {
+            font-size: 1.5rem;
+            line-height: 1;
+          }
+        }
+      }
+
+      &.is-basic .text {
+        @extend %is-basic;
+      }
+
+      &.is-select .text {
+        @extend %is-select;
+      }
+
+      &.is-premium .text {
+        @extend %is-premium;
+      }
+    }
+
+    label {
+      position: relative;
+      width: 100%;
+      input[type="radio"] {
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        opacity: 0;
+        bottom: 0;
+        left: 50%;
+
+        &:checked + .text {
+          &.is-basic {
+            @extend %is-basic;
+          }
+    
+          &.is-select {
+            @extend %is-select;
+          }
+    
+          &.is-premium {
+            @extend %is-premium;
+          }
+        }
+
+        &[disabled] + .text {
+          opacity: 0.25;
+          cursor: not-allowed;
+        }
+      }
+
+      &:hover .text {
+        &.is-basic {
+          @extend %is-basic;
+        }
+  
+        &.is-select {
+          @extend %is-select;
+        }
+  
+        &.is-premium {
+          @extend %is-premium;
+        }
+      }
+    }
+  }
+
+  .hours .options-wrapper .option {
+    flex-basis: 30%;
+    max-width: calc(30% - 4px);
+  }
+
+  .error {
+    color: $red;
+    @extend %message;
+  }
+
+  .success {
+    color: $green;
+    @extend %message;
+  }
+
+  .need-login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $grey-table-bg;
+    z-index: 1;
+    opacity: 0.9;
+    font-size: 1.2rem;
+    border: 1px solid $grey-table-bg;
+  }
+}

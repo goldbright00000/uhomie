@@ -1,0 +1,1 @@
+<router-view :user-id="{{ auth()->id() }}" :role-id="5" ></router-view>

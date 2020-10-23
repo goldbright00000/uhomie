@@ -1,0 +1,191 @@
+@import "variables";
+
+.title.has-bottom-line {
+  position: relative;
+}
+.title.has-bottom-line:after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  z-index: 30;
+  left: 0;
+  height: 3px;
+  width: 10%;
+  background: $yellow;
+}
+
+%input-border {
+  border-color: $grey;
+  font-style: italic;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.is-vcentered {
+  align-items: center;
+}
+
+#referalls-header {
+  background-image: url('../images/referalls/img-banner.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .main-title-wrapper {
+    padding-top: 4rem;
+    padding-left: 2rem;
+  }
+
+  h1.title {
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  .button.is-black {
+    margin-top: 1rem;
+    background-color: transparent;
+    border-color: black; /*#ffd900*/
+    color: black;
+
+    &:hover {
+      border-color: $white;
+      background-color: $white;
+      color: $grey;
+    }
+  }
+
+  .img-title {
+    height: 7rem;
+  }
+  
+  #arrow-down {
+    color: $white;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+  }
+}
+
+
+#easy {
+  background-color: #00a2ff;
+  padding: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+
+  .columns {
+    margin: 2rem auto;
+  }
+  .column {
+    color: white;    
+    text-align: center;
+    padding: 1rem;
+
+    img, p {
+      max-width: 250px;
+      margin: 1rem auto;
+    }
+  }
+}
+
+#two-forms {
+  padding: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+
+  .columns {
+    margin: 2rem auto;
+  }
+  .column {
+    text-align: center;
+    padding: 1rem;
+
+    img, p {
+      max-width: 300px;
+      margin: 1rem auto;
+    }
+  }
+}
+
+#fifth-title {
+  background-image: url('../images/imagen-separador.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1.title {
+    color: $white;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .hero-body {
+    padding: 5rem 0;
+  }
+}
+
+
+
+/* Responsive */
+@media (min-width: 460px) {
+  #landing-header {
+    .description {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #landing-header {
+    background-position: center;
+  }
+
+  #contact {
+    .form-container {
+      label {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-height: 500px) {
+  #landing-header {
+    .title-image {
+      max-width: 290px;
+    }
+
+    .description {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+
+/* REGISTER */
+#referalls-header.register {
+  background-image: url('../images/referalls/banner-register.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.form-section {
+  background-color: white;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+}
+
+#form-register {
+  padding: 1rem;
+}
+
+.link-ref {
+  background-color: #00a2ff;
+}

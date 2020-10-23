@@ -1,0 +1,344 @@
+@import 'variables';
+
+
+#explore-header {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.grupo {
+    background-image: url('../images/explore/banner_grupo.jpg');
+  }
+
+  &.estudiante {
+    background-image: url('../images/explore/banner_estudiante.jpg');
+  }
+
+  &.ejecutivos {
+    background-image: url('../images/explore/banner_ejecutivos.jpg');
+  }
+
+  &.hijos {
+    background-image: url('../images/explore/banner_hijos.jpg');
+  }
+
+  &.sinhijos {
+    background-image: url('../images/explore/banner_sinhijos.jpg');
+  }
+
+  &.soltero {
+    background-image: url('../images/explore/banner_soltero.jpg');
+  }
+
+  &.mascota {
+    background-image: url('../images/explore/banner_mascota.jpg');
+  }
+
+  .main-title-wrapper {
+    text-align: center;
+  }
+
+  h1.title {
+    color: $white;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.25rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      z-index: 30;
+      left: calc(50% - 2.5rem);
+      height: 2px;
+      width: 5rem;
+      background: $yellow;
+    }
+  }
+
+  .img-title {
+    height: 7rem;
+  }
+
+  #arrow-down {
+    color: $white;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+  }
+}
+
+.property-list {
+  margin: 2rem 0 !important;
+}
+
+.price-slider-wrapper {
+  width: 100%;
+  height: 10rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}
+
+.price-range {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.scoring-range {
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+}
+
+.input {
+  border: 1px solid $grey-light;
+  height: 2rem;
+  font-size: 0.8rem;
+}
+
+.accordions {
+  margin-top: 2rem;
+
+  .accordion {
+    border-top: 1px solid $black;
+    padding: 0.7rem 0;
+    border-radius: 0;
+    background-color: $white;
+
+    .accordion-header {
+      background-color: $white;
+      border-radius: 0;
+      font-size: 0.9rem;
+      color: $primary;
+      font-weight: 600;
+      padding-left: 0;
+
+      button.toggle {
+        background-color: transparent;
+
+        &::before {
+          content: "\f107";
+          top: unset;
+          font-family: FontAwesome;
+          color: $black;
+        }
+      }
+    }
+
+    .accordion-header+.accordion-body {
+      border: none;
+      border-radius: 0;
+
+      .accordion-content {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &:last-of-type {
+      border-bottom: 1px solid $black;
+    }
+
+    &.is-active .accordion-header .toggle::before {
+      content: "\f106";
+      font-family: FontAwesome;
+    }
+  }
+}
+.carousel-item {
+  cursor: pointer;
+}
+
+.accordion-content .filter-field {
+  margin: 0.5rem 0;
+
+  img {
+    width: 1.1rem;
+    vertical-align: middle;
+  }
+
+  span {
+    font-size: 0.8rem;
+  }
+
+  .field {
+    float: right;
+  }
+}
+
+.vue-numeric-input {
+  float: right;
+
+  .numeric-input {
+    background-color: $white !important;
+    border: 0 !important;
+    color: $black !important;
+    font-size: 0.9rem !important;
+    height: 1.3rem !important;
+    padding-right: 1.3rem !important;
+    padding-left: 1.3rem !important;
+  }
+
+  .btn-increment,
+  .btn-decrement {
+    border: 1px solid $black !important;
+    border-radius: 100% !important;
+    height: 0.9rem !important;
+    width: 0.9rem !important;
+    background-color: $white !important;
+    box-shadow: none !important;
+  }
+}
+
+#explore .select2-container {
+  display: block;
+  width: 100% !important;
+}
+
+#explore .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  font-size: 0.9rem;
+  border: 2px solid $primary;
+  font-style: italic;
+  border-radius: 0;
+  background-color: $white;
+}
+
+#explore .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  float: right;
+  margin-left: 2px;
+  color: $black;
+}
+
+#explore .select2-container--default.select2-container--focus .select2-selection--multiple,
+#explore .select2-container--default .select2-selection--multiple {
+  border: 1px solid $grey-light;
+  border-radius: 0;
+}
+
+#explore .select2-container--default .select2-selection--single {
+  border-radius: 0;
+  padding: 0;
+  height: 2rem;
+  font-size: 0.8rem;
+  border-color: $grey-light;
+
+  .select2-selection__arrow {
+    height: 2rem;
+
+    b {
+      border-color: $grey-light transparent transparent transparent;
+    }
+  }
+}
+
+button#js-filters-active-mobile {
+  margin-top: 2rem;
+  color: #00a2ff;
+}
+button#js-filters-active-mobile img {
+  width: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+
+.inverte-color .select2-selection__rendered {
+  background-color: #00a2ff;
+  color: white !important;
+  line-height: 2rem !important;
+  text-transform: uppercase;
+}
+
+.quitar-filtro {
+  cursor: pointer;
+}
+.quitar-filtro:hover {
+  color: #00a2ff;
+}
+
+/* MAPS */
+#maps {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    
+  }
+}
+.map-filter {
+  position: absolute;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255,255,255,1);
+
+  @media (min-width: 768px) {
+    width: 300px;
+    background-color: rgba(255,255,255,0.9);    
+  }
+}
+.map-filter-min {
+  text-align: left;
+  border-bottom: 1px solid #d1d1d1;
+  padding: 1rem 0.5rem;
+  -webkit-transition: all 0.5s; /* Safari */
+  transition: all 0.5s;
+}
+.map-filter-close {
+  padding-left: 265px;
+  @media (min-width: 768px) {
+    padding-left: 315px;
+  }
+}
+.gm-style .gm-style-iw-c {
+  max-width: 300px !important;
+}
+
+button.is-loading::after {
+  border: 2px solid #ffd900 !important;
+  border-right-color: transparent !important;
+  border-top-color: transparent !important;
+}
+
+.icons-explore img {
+  object-fit: contain !important;
+}
+.carousel .icons-explore .carousel-item {
+  height: 6rem;
+}
+.carousel .carousel-container.icons-explore .carousel-item .title {
+  color: black;
+  top: inherit;
+  bottom: 0;
+  font-style: normal;
+  font-size: 0.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0;
+
+  @media (min-width: 768px) {
+    font-size: 0.6rem;
+  }
+}
+
+
+.icons-necesidades.carousel .carousel-item {
+  padding: 0.2rem !important;
+
+  @media (min-width: 768px) {
+    padding: 1rem !important;
+  }
+}

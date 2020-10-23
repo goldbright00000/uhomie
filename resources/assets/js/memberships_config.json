@@ -1,0 +1,125 @@
+{
+  
+  "memberships_config": [
+    { 
+      "type" : "boolean",
+      "key" : "display_all_properties" , 
+      "order" : 3 
+    },
+    { 
+      "type" : "number",
+      "key" : "commission" , 
+      "order" : 4 
+    },
+    { 
+      "type" : "boolean",
+      "key" : "suggestions_to_owners" , 
+      "order" : 6 
+    },
+    { 
+      "type" : "unlimited",
+      "key" : "application_count" , 
+      "order" : 1 
+    },
+    { 
+      "type" : "unlimited",
+      "key" : "properties_count" , 
+      "order" : 2 
+    },
+    { 
+      "type" : "boolean",
+      "key" : "score_display" , 
+      "order" : 3 
+    },
+    { 
+      "type" : "number",
+      "key" : "applications_received_count" , 
+      "order" : 5 
+    },
+    { 
+      "type" : "number",
+      "key" : "tenanting_fee" , 
+      "order" : 5 
+    },
+    { 
+      "type" : "boolean",
+      "key" : "suggestions_to_tenants" , 
+      "order" : 8 
+    },
+    { 
+      "type" : "boolean",
+      "key" : "owner_verification" , 
+      "order" : 9 
+    },
+    { 
+      "type" : "boolean",
+      "key" : "smart_agent" , 
+      "order" : 10 
+    },
+    { 
+      "type" : "unlimited",
+      "key" : "montly_publications" , 
+      "order" : 1 
+    },
+    { 
+      "type" : "number",
+      "key" : "package_amount" , 
+      "order" : 0 
+    },
+    { 
+      "type" : "number",
+      "key" : "services_counts" , 
+      "order" : 1 
+    },
+    { 
+      "type" : "number",
+      "key" : "photos_per_project" , 
+      "order" : 2 
+    },
+    { 
+      "type" : "number",
+      "key" : "videos_per_project" , 
+      "order" : 3 
+    },
+    { 
+      "type" : "",
+      "key" : "project_due_days" , 
+      "order" : 4 
+    },
+    { 
+      "type" : "number",
+      "key" : "add_days" , 
+      "order" : 5 
+    },
+    { 
+      "type" : "radio",
+      "key" : "owner_contact" , 
+      "order" : 6 
+    },
+    { 
+      "type" : "number",
+      "key" : "add_zones" , 
+      "order" : 7 
+    },
+    { 
+      "type" : "boolean",
+      "key" : "public_support" , 
+      "order" : 8 
+    },
+    { 
+      "type" : "boolean",
+      "key" : "service_fee" , 
+      "order" : 9 
+    },
+    { 
+      "type" : "boolean",
+      "key" : "trust_seal" , 
+      "order" : 10 
+    },
+    { 
+      "type" : "radio",
+      "key" : "recommendations" , 
+      "order" : 11 
+    }
+  ]
+}

@@ -1,0 +1,482 @@
+@import "variables";
+
+@import './animate.scss';
+
+.navbar-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  top: 0;
+}
+
+#landing-header {
+  background-image: url('../images/header.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 1024px) {
+    background-image: url('../images/header_mobile.jpg');
+    background-position: center;
+  }  
+
+  .main-title-container {
+    position: relative;
+    top: 3rem;
+  }
+
+  h1.title {
+    color: $white;
+    margin: 0;
+
+    &:last-of-type {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .input {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1.2rem;
+    padding: 1.97rem 1.5rem;
+
+    &::placeholder {
+      color: $grey-dark;
+      font-weight: 100;
+      font-style: italic;
+    }
+  }
+
+  a.search {
+    font-size: 1.75rem;
+    color: transparent;
+    background-color: $white;
+    border-radius: 0;
+    border: none;
+    position: relative;
+    -webkit-text-stroke: 2px $yellow;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 30;
+      top: 25%;
+      width: 1px;
+      height: 50%;
+      background: $yellow;
+    }
+  }
+
+  #arrow-down {
+    color: $white;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+  }  
+}
+
+section#about {
+  padding: 0;
+
+  .column:first-child {
+    background-image: url('../images/imagen_uhomie.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .column:last-child {
+    padding: 3rem 2rem !important;
+  }
+
+  h1.title>span {
+    color: $primary;
+    font-style: italic;
+  }
+
+  .media+.media {
+    margin-top: 1.5rem;
+    border-top: none;
+  }
+
+  .media-left {
+    margin-right: 2rem;
+  }
+
+  a.button {
+    margin-top: 3rem;
+    border-radius: 0;
+    padding: 0 2rem;
+  }
+}
+
+section#options-gallery {
+  .column {
+    // position: relative;
+
+    .wrapper-option {
+      position: relative;
+      text-align: center;
+
+      &:hover {
+        .text h1.title:after {
+          content: "";
+          position: absolute;
+          left: calc(50% - 2.5rem);
+          z-index: 30;
+          bottom: 0;
+          width: 5rem;
+          height: 2px;
+          background: $yellow;
+        }
+
+        .text p {
+          display: block;
+        }
+
+        .img:after {
+          opacity: 1;
+        }
+      }
+    }
+
+    .img {
+      display: flex;
+      position: relative;
+
+      &:after {
+        content: '\A';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba($black, 0.6);
+        opacity: 0;
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .text {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: calc(50% - 1rem);
+
+    h1.title {
+      font-style: italic;
+      color: $white;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      position: relative;
+    }
+
+    p {
+      display: none;
+      font-size: 0.75rem;
+      font-style: italic;
+      color: $white;
+    }
+  }
+}
+
+figure.tile {
+  position: relative;
+
+  .img {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    justify-content: center;
+    text-align: center;
+
+    h1.title {
+      font-size: 1.5rem;
+      color: $white;
+      font-weight: 500;
+      font-style: italic;
+      padding-bottom: 1rem;
+      position: relative;
+      display: none;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: calc(50% - 2.5rem);
+        z-index: 30;
+        bottom: 0;
+        width: 5rem;
+        height: 2px;
+        background: $yellow;
+      }
+    }
+  }
+
+  .img:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($black, 0.6);
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    .img:after {
+      opacity: 1;
+    }
+
+    .text h1.title {
+      display: block;
+    }
+  }
+}
+
+.grafico {
+  margin: 0 auto;
+}
+
+section#features-titles {
+  .level-item {
+    font-size: 1.25rem;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .15rem;
+
+    img {
+      width: 5rem;
+    }
+  }
+}
+
+.tile {
+  figure>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    p {
+      font-weight: 600;
+      font-style: italic;
+    }
+  }
+
+  .text-logo {
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    img {
+      margin-top: 1rem;
+      width: 15rem;
+    }
+  }
+}
+
+#fifth-title {
+  background-image: url('../images/imagen-separador.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1.title {
+    color: $white;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .hero-body {
+    padding: 5rem 0;
+  }
+}
+
+#sixth-title {
+  p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+}
+
+#membresias {
+
+    .container{
+        background-image: url('../images/trama-membresias.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  a.button {
+    border-radius: 0;
+    padding: 1.25rem 2rem;
+    font-weight: 600;
+  }
+}
+
+#calendar-section {
+  background-image: url('../images/imagen_calendario.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 0;
+
+  .title:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+
+  .title:last-of-type {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .city-list-wrapper {
+    margin: 2rem 0;
+    padding: 2rem;
+    border-top: 4px solid $yellow;
+    background-color: $white;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.1);
+
+    .city-list {
+/*      display: flex; */
+/*      justify-content: space-between; */
+
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+
+      .city-title {
+        color: $grey-light;
+        font-weight: 600;
+        font-size: 1.2rem;
+        cursor: pointer;
+        &:hover {
+          color: $grey-darker;
+        }
+      }
+    }
+
+  }
+
+  .level {
+    align-items: start;
+
+    .button {
+      border-radius: 0;
+      padding: 1rem 2rem;
+      font-weight: 600;
+    }
+  }
+}
+
+
+#option-basic-link {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  bottom: 50px;
+  right: 60%;
+}
+#option-select-link {
+  position: absolute;
+  left: 30%;
+  top: 0;
+  bottom: 50%;
+  right: 30%;
+}
+#option-premium-link {
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  bottom: 50px;
+  right: 0;
+}
+
+
+#home-init .background{
+  background-image: url('../images/home/base-ciudad.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 180px;
+  width: 100%;
+}
+#home-init .tabs {
+  background-color: #f3f3f3;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+#home-init .tabs a {
+  font-size: 0.9rem;
+  font-weight: bold;
+} 
+#home-init .background-grey {
+  background-color: #f3f3f3;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+#home-init .tab-container {
+  display: none;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+#home-init .tab-container.is-active {
+  display: block;
+  opacity: 1;
+}
+#home-init .columns .column {
+  text-align: center;
+}
+#home-init .column h4 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#home-init .column p {
+  font-size: 0.9rem;
+}

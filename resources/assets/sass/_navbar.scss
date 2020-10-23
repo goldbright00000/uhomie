@@ -1,0 +1,59 @@
+.navbar {
+  background-color: transparent;
+}
+
+.navbar .navbar-item > a {
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.logo-transparent {
+  display: block;
+}
+
+.logo-solid {
+  display: none;
+}
+
+.link-login,
+.link-register {
+  font-weight: bold !important;
+}
+
+/* LIGHT THEME */
+.is-light .logo-transparent {
+  display: none;
+}
+.is-light .navbar .navbar-item > a {
+  color: black;
+}
+.is-light .logo-solid {
+  display: block;
+}
+
+span.h-separator {
+  color: $white;
+  margin: 0 1rem;
+}
+
+.navbar-brand img {
+  max-height: 2.25rem;
+}
+
+.navbar .icon-link {
+  margin: 0;
+  width: 0.75rem;
+}
+
+.navbar .login-icon {
+  width: 1.25rem;
+}
+
+.menu-access {
+  font-size: 0.8rem;
+}
+
+.menu-general {
+  font-size: 0.9rem;
+}

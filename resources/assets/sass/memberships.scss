@@ -1,0 +1,157 @@
+@import "variables";
+.navbar-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  top: 0;
+}
+#landing-header {
+  background-image: url('../images/banner_membresia.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .main-title-container {
+    position: relative;
+    top: 3rem;
+  }
+
+  .title-image {
+    height: 7rem;
+  }
+
+  #arrow-down {
+    color: $white;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+  }
+}
+
+.membership-item .icon-arrow-down {
+  display: none;
+}
+
+.membership-item.selected {
+    position: relative;    
+
+    .icon-arrow-down {
+        color: $yellow;
+        font-size: 3rem;
+        display: block;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        line-height: 0.25;
+    }
+
+    .membership-action-wrapper {
+        border: 1px solid $grey-light;
+        margin-top: 1rem;
+    }
+}
+
+.membership-item.omit {
+    position: relative;
+    cursor: pointer;
+
+    .overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: $black;
+        opacity: 0.5;
+        z-index: 1;
+    }
+}
+
+.membership-image-wrapper {
+  position: relative;
+  cursor: pointer;
+
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .membership-title {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .membership-title>h1 {
+    color: $white;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    padding-bottom: 0.3rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 37.5%;
+      z-index: 30;
+      bottom: 0;
+      height: 2px;
+      width: 25%;
+      background: yellow;
+    }
+  }
+
+  .membership-title>span {
+    color: $white;
+    font-size: 0.75rem;
+    font-style: italic;
+    letter-spacing: 1px;
+  }
+}
+
+.membership-action-wrapper {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.15rem;
+  font-style: italic;
+
+  h1 {
+    font-weight: 500;
+    color: $black;
+  }
+
+  .button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+  }
+}
+
+.plans-section {
+    display: none;
+    padding: 0 1.5rem 3rem 1.5rem;
+
+    .main-title .hero-body {
+        padding: 0 1.5rem 0 1.5rem;
+    }
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* AGREGADO POR PAM 
+@media (max-width: 768px) {
+  .title {
+    text-align: center;
+  }
+  .main-title .title:last-child:after {
+    left:45%;
+  }
+}*/

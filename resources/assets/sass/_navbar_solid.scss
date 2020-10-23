@@ -1,0 +1,107 @@
+@import 'variables';
+
+.navbar-solid {
+  &.navbar {
+    padding: 0;
+    border-bottom: 1px solid $grey-lighter;
+    background: $white;
+  }
+
+  .logo-transparent {
+    display: none;
+  }
+
+  .logo-solid {
+    display: block;
+  }
+
+  &.navbar .navbar-item>a {
+    color: $grey-darker;
+  }
+
+  span.h-separator {
+    color: $grey-darker;
+    margin: 0 1rem;
+  }
+
+  .navbar-brand img {
+    max-height: 2.25rem;
+  }
+
+  &.navbar .icon-link {
+    margin: 0;
+    width: 0.75rem;
+  }
+
+  &.navbar .login-icon {
+    width: 1.25rem;
+  }
+
+  .menu-access {
+    font-size: 0.8rem;
+  }
+
+  .menu-general {
+    font-size: 0.9rem;
+  }
+
+  .navbar-item.logo {
+    padding: 0.5rem;
+    width: 30%;
+
+    @media (min-width: 768px) {
+      width: inherit;
+    }
+  }
+
+  .navbar-menu .columns {
+    width: 100%;
+    position: relative;
+  }
+
+
+  div.search { 
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 30%;
+    max-width: 500px;
+    z-index: 999;
+
+    input {
+      background-color: transparent;
+    }
+    
+    @media (max-width: 768px) {
+      width: 40%;
+      padding-left: 0; 
+      padding-right: 0;
+      background-color: transparent;
+      left: 150px;
+    }
+    @media (min-width: 1216px) {
+      top: 10px;
+      left: 200px; 
+      width: 50%;
+    }
+  }
+  div.search ul.typeahead {
+    @media (max-width: 768px) {
+      min-height: 100px;
+      min-width: 300px;
+      left: -100px !important;
+    }
+  }
+  div.search .control a.button.search {
+    @media (max-width: 768px) {
+      display: none;
+    } 
+  }
+  .search input::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .navbar-burger {
+    color: #4a4a4a !important;
+  }
+}
